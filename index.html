@@ -1,0 +1,88 @@
+<div class="container">
+    <!-- EN-TÊTE -->
+    <div class="header">
+        <div class="language-selector">
+            <button class="lang-btn active" data-lang="fr" id="langFr">🇫🇷 Français</button>
+            <button class="lang-btn" data-lang="en" id="langEn">🇬🇧 English</button>
+        </div>
+        <h1>📝 LetterGen Pro</h1>
+        <p id="headerSubtitle">Générateur professionnel de lettres de motivation bilingues</p>
+    </div>
+    
+    <!-- CONTENU PRINCIPAL -->
+    <div class="content">
+        <!-- NOM -->
+        <div class="form-group">
+            <label for="name" class="required" data-fr="Nom complet" data-en="Full name">Nom complet</label>
+            <input type="text" id="name" required>
+        </div>
+        
+        <!-- TYPE DE RECHERCHE -->
+        <div class="form-group">
+            <label for="jobType" class="required" data-fr="Type de recherche" data-en="Position type">Type de recherche</label>
+            <select id="jobType" required>
+                <!-- Options ajoutées par JavaScript -->
+            </select>
+        </div>
+        
+        <!-- CHAMP "AUTRE" -->
+        <div class="form-group">
+            <div class="other-job-container" id="otherJobContainer">
+                <label for="jobDescription" data-fr="Description de votre recherche" data-en="Position description">Description de votre recherche</label>
+                <input type="text" id="jobDescription">
+            </div>
+        </div>
+        
+        <!-- COMPÉTENCES -->
+        <div class="form-group">
+            <label for="skills" class="required" data-fr="Compétences principales" data-en="Key skills">Compétences principales</label>
+            <textarea id="skills" required></textarea>
+        </div>
+        
+        <!-- LANGUE DE LA LETTRE -->
+        <div class="form-group">
+            <label data-fr="Langue de la lettre" data-en="Letter language">Langue de la lettre</label>
+            <div style="display: flex; gap: 12px; margin-top: 8px;">
+                <button class="lang-btn letter-lang active" data-lang="fr" id="letterLangFr">🇫🇷 Français</button>
+                <button class="lang-btn letter-lang" data-lang="en" id="letterLangEn">🇬🇧 English</button>
+            </div>
+        </div>
+        
+        <!-- BOUTONS -->
+        <div class="buttons">
+            <button class="btn btn-generate" id="generateBtn">
+                <span>✨</span>
+                <span data-fr="Générer ma lettre" data-en="Generate my letter">Générer ma lettre</span>
+            </button>
+            <button class="btn btn-pdf" id="pdfBtn" disabled>
+                <span>📥</span>
+                <span data-fr="Télécharger PDF" data-en="Download PDF">Télécharger PDF</span>
+            </button>
+        </div>
+        
+        <!-- MESSAGES -->
+        <div class="message" id="successMessage"></div>
+        <div class="message error" id="errorMessage"></div>
+        
+        <!-- CHARGEMENT -->
+        <div class="loading" id="loading">
+            <div class="loading-spinner"></div>
+            <span data-fr="Génération en cours..." data-en="Generating...">Génération en cours...</span>
+        </div>
+        
+        <!-- APERÇU -->
+        <div class="preview-container">
+            <label data-fr="Aperçu de votre lettre" data-en="Letter preview">Aperçu de votre lettre</label>
+            <div class="preview empty" id="preview">
+                <span data-fr="Votre lettre apparaîtra ici..." data-en="Your letter will appear here...">
+                    Votre lettre apparaîtra ici...
+                </span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- PIED DE PAGE -->
+    <div class="footer">
+        <p>© 2024 LetterGen Pro • <span data-fr="Générateur professionnel bilingue" data-en="Professional bilingual generator"></span></p>
+    </div>
+</div>
